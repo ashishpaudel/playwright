@@ -8,6 +8,7 @@ export class Home{
 
     }
 
+    
     async home() {
         await this.click_search
         await this.search
