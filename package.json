@@ -1,14 +1,22 @@
 {
-  "name": "new_test_file",
+  "name": "playwright",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishpaudel/playwright.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishpaudel/playwright/issues"
+  },
+  "homepage": "https://github.com/ashishpaudel/playwright#readme",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.19"
+    "@types/node": "^22.15.21"
   }
 }
