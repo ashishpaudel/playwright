@@ -11,6 +11,7 @@ test('Daraz',async({page}) =>{
     //home page 
     const HomePage = new Home(page)
     await HomePage.home('iphone')
-    await HomePage.addToCart('Apple iPhone 14 (128GB) 6.1&quot; Genuine Super Retina OLED Display')
-    await HomePage.gotoCart()
+    // await page.getByAltText
+    await HomePage.addToCart('Small Phone Single Back Camera iPhone 7/8/SE (All Same Size) Liquid Silicone Soft Cover Case | Microfiber Inside')
+    // await HomePage.gotoCart()
 })
