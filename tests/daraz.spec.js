@@ -12,6 +12,7 @@ test('Daraz',async({page}) =>{
     const HomePage = new Home(page)
     await HomePage.home('iphone')
     // await page.getByAltText
-    await HomePage.addToCart('Small Phone Single Back Camera iPhone 7/8/SE (All Same Size) Liquid Silicone Soft Cover Case | Microfiber Inside')
+    await HomePage.addToCart('K9 Wireless Collar Mic iPhone/Android & Type C Supported Wireless Microphone')
+
     // await HomePage.gotoCart()
 })
