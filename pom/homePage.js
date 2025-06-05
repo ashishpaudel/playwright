@@ -17,33 +17,19 @@ export class Home {
     async home(iphone) {
         await this.click_search.fill(iphone);
         await this.search.click();
-        await this.page.waitForTimeout(1000); // Consider replacing with `waitForLoadState()` if possible
+        await this.page.waitForLoadState('networkidle'); // safer option
+        await this.productList.first().waitFor({ state: 'visible', timeout: 10000 });
     }
 
     async addToCart(productName) {
         const products = await this.productList.allTextContents()
-         const productElements = await this.productList.elementHandles()
-        // // const products = await this.productList
-
-        //  console.log(await this.productList.allTextContents())
-        // console.log(products)
-
-        for(let i = 0; i < products.length; i++) {
-            // const name = await product.getAttribute('title');
-            //  const text = await product.textContent();
-            const productElements= await this.productList.elementHandles()
-            if (products[i].trim() === productName){
-                await productElements[i].locator('title').click(); // Click the product
-              
-                break;
-            }    
-        }
-          if(!products){
-                console.log("product dosnt exist please check again.")
+        for (let i = 0; i < products.length; i++) {
+            if (products[i] == productName) {
+                console.log('milyo')
             }
-         await this.page.waitForTimeout(10000)
-        await this.addToCartBtn.click(); // Click "Add to Cart"
-        await this.goCart.click(); // Go to cart
+        }
+
+        
     }
 }
 // }
