@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test'
 import {login} from '../pom/login'
 import {Home, homePage} from '../pom/homePage'
-
+// method for login
 test('Daraz',async({page}) =>{ 
     //login page  
     const  Login = new login(page)
